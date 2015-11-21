@@ -24,6 +24,14 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.codersparks</groupId>
+            <artifactId>spring-cloud-docker-eureka-configuration</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

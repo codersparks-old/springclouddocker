@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: ${SCD_DISCOVERY_INSTANCE_HOST}
+    ip: ${SCD_DISCOVERY_INSTANCE_HOST}
     port: ${SCD_DISCOVERY_INSTANCE_PORT}
   client:
     registerWithEureka: false
