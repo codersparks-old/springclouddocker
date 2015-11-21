@@ -12,6 +12,7 @@
         <module>spring-cloud-docker-discovery</module>
         <module>spring-cloud-docker-config</module>
         <module>spring-cloud-docker-uuidserver</module>
+        <module>spring-coud-docker-proxy</module>
     </modules>
 
 

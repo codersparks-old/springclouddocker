@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: SCDProxy
+  profiles:
+    active: 'DEV'
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: SCDConfig
+      failFast: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER_HOST}:${EUREKA_SERVER_PORT}/eureka/
