@@ -12,8 +12,9 @@
         <module>spring-cloud-docker-discovery</module>
         <module>spring-cloud-docker-config</module>
         <module>spring-cloud-docker-uuidserver</module>
-        <module>spring-coud-docker-proxy</module>
+        <module>spring-cloud-docker-proxy</module>
         <module>spring-cloud-docker-eureka-configuration</module>
+        <module>spring-cloud-docker-var-service</module>
     </modules>
 
 
@@ -40,5 +41,20 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
