@@ -7,7 +7,7 @@ import subprocess
 
 LOOP_SLEEP = 10
 
-_logger = logging.logger("Start_Service")
+_logger = logging.getLogger("Start_Service")
 
 def get_app_list(apps):
 
