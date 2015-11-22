@@ -5,8 +5,3 @@ eureka:
     hostname: ${SCD_DISCOVERY_INSTANCE_HOST}
     ip: ${SCD_DISCOVERY_INSTANCE_HOST}
     port: ${SCD_DISCOVERY_INSTANCE_PORT}
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${EUREKA_SERVER_HOST}:${EUREKA_SERVER_PORT}/eureka/
