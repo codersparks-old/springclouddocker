@@ -83,5 +83,6 @@ if __name__ == "__main__":
                 if len(dependencies) == 0:
                     _logger.info("No dependencies left, setting app_found to True")
                     app_found = True
-
+    else:
+        _logger.info("No dependencies detected")
     subprocess.Popen(["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"])
