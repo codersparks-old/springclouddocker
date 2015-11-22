@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 /**
  * Created by codersparks on 21/11/2015.
@@ -22,6 +23,7 @@ public class EurekaConfig  {
     private int instancePort;
 
     @Bean
+    @Profile("DEV")
     public EurekaInstanceConfigBean eurekaInstanceConfigBean() {
         EurekaInstanceConfigBean instanceConfigBean = new EurekaInstanceConfigBean();
         instanceConfigBean.setPreferIpAddress(true);

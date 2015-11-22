@@ -1,9 +1,12 @@
 server:
-  port: 8080
+  port: 8888
 
+eureka:
+ instance:
+   nonSecurePort: ${SCD_INSTANCE_PORT}
 spring:
   cloud:
       config:
         server:
           git:
-            uri: file:/git-repos/springclouddocker-config.git
+            uri: https://github.com/codersparks/springclouddocker-config.git

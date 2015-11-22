@@ -1,3 +1,15 @@
 spring:
   application:
     name: SCDConfig
+  profiles:
+    active: 'DEV'
+  cloud:
+    config:
+      discovery:
+        serviceId: SCDConfig
+        enabled: false
+    failFast: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${SCD_EUREKA_HOST}:${SCD_EUREKA_PORT}/eureka/

@@ -1,6 +1,5 @@
 server:
   port: 8761
-
 eureka:
   instance:
     hostname: ${SCD_DISCOVERY_INSTANCE_HOST}
