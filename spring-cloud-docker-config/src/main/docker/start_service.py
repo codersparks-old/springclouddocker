@@ -96,4 +96,4 @@ if __name__ == "__main__":
     process = subprocess.Popen(["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"])
 
     while process.returncode is None:
-        _logger.info("Process pid: %s" % process.p)
+        _logger.info("Process pid: %s" % process.pid)
