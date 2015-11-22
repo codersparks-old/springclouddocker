@@ -13,6 +13,6 @@ VOLUME /tmp
 
 RUN bash -c 'touch /app.jar'
 
-EXPOSE 8080
+EXPOSE 8761
 
 ENTRYPOINT ["python","/start_service.py"]
