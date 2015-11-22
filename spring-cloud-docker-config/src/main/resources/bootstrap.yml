@@ -4,9 +4,7 @@ spring:
   cloud:
     config:
       discovery:
-        serviceId: SCDConfig
         enabled: false
-    failFast: true
 eureka:
   client:
     serviceUrl:
