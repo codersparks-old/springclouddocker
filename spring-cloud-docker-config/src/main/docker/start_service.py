@@ -24,7 +24,13 @@ def get_app_list(apps):
 if __name__ == "__main__":
 
     logging.basicConfig(level=logging.INFO)
-    dependencies = os.environ["SCD_DEPENDENCIES"].split(",")
+    dependencies_env_value = os.environ["SCD_DEPENDENCIES"]
+
+    if dependencies_env_value == "":
+        dependencies = []
+    else:
+        dependencies = dependencies_env_value.split(",")
+
     _logger.info("Dependencies: %s" % dependencies)
     eureka_host = os.environ["SCD_EUREKA_HOST"]
     _logger.info("Eureka Host: %s" % eureka_host)
@@ -59,7 +65,7 @@ if __name__ == "__main__":
         app_found = False
 
         while not app_found:
-            app_info_response = requests.get("http://%s:%s/health" % (eureka_host, eureka_port))
+            app_info_response = requests.get("http://%s:%s/eureka/apps" % (eureka_host, eureka_port))
             app_info = app_info_response.json()
 
             _logger.info("App Info: %s" % app_info)
