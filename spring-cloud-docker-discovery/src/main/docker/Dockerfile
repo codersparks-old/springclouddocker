@@ -1,6 +1,6 @@
-FROM java:8
+FROM centos:7
 
-RUN yum install -y python-setuptool
+RUN yum install -y java-1.8.0-openjdk python-setuptool
     && easy_install pip && pip install requests
 
 ADD start_service.py start_service.py
