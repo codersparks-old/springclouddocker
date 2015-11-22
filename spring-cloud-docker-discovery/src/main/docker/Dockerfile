@@ -1,6 +1,5 @@
 FROM java:8
 
-ADD start_service.py start_service.py
 ADD spring-cloud-docker-discovery.jar app.jar
 
 ENV spring.profiles.active DOCKER
