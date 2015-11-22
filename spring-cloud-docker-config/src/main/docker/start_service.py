@@ -26,9 +26,9 @@ if __name__ == "__main__":
     dependencies = os.environ["SCD_DEPENDENCIES"].split(",")
     _logger.info("Dependencies: %s" % dependencies)
     eureka_host = os.environ["SCD_EUREKA_HOST"]
-    _logger.info("Eureka Host: " % eureka_host)
+    _logger.info("Eureka Host: %s" % eureka_host)
     eureka_port = os.environ["SCD_EUREKA_PORT"]
-    _logger.info("Eureka Port: " % eureka_port)
+    _logger.info("Eureka Port: %s" % eureka_port)
 
     eureka_up = False
 
