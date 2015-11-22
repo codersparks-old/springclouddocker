@@ -93,4 +93,7 @@ if __name__ == "__main__":
                     app_found = True
     else:
         _logger.info("No dependencies detected")
-    subprocess.Popen(["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"])
+    process = subprocess.Popen(["java","-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"])
+
+    while process.returncode is None:
+        _logger.info("Process pid: %s" % process.p)
