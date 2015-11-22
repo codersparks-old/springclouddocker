@@ -62,6 +62,7 @@ if __name__ == "__main__":
             app_info_response = requests.get("http://%s:%s/health" % (eureka_host, eureka_port))
             app_info = app_info_response.json()
 
+            _logger.info("App Info: %s" % app_info)
             apps = app_info["applications"]["application"]
 
             if apps == None:
