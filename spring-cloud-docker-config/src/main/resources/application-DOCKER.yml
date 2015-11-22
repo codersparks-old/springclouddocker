@@ -3,7 +3,7 @@ server:
 
 eureka:
  instance:
-   nonSecurePort: ${SCD_INSTANCE_PORT}
+   preferIpAddress: true
 spring:
   cloud:
       config:
