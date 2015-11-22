@@ -23,11 +23,11 @@ def get_app_list(apps):
 
 if __name__ == "__main__":
 
-    dependencies = os.environ("SCD_DEPENDENCIES").split(",")
+    dependencies = os.environ["SCD_DEPENDENCIES"].split(",")
     _logger.info("Dependencies: %s" % dependencies)
-    eureka_host = os.environ("SCD_EUREKA_HOST")
+    eureka_host = os.environ["SCD_EUREKA_HOST"]
     _logger.info("Eureka Host: " % eureka_host)
-    eureka_port = os.environ("SCD_EUREKA_PORT")
+    eureka_port = os.environ["SCD_EUREKA_PORT"]
     _logger.info("Eureka Port: " % eureka_port)
 
     eureka_up = False
