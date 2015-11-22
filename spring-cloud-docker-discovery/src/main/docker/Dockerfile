@@ -1,8 +1,6 @@
 FROM centos:7
 
-RUN yum install -y java-1.8.0-openjdk python-setuptool
-    && easy_install pip && pip install requests
-
+RUN yum install -y java-1.8.0-openjdk python-setuptool && easy_install pip && pip install requests
 ADD start_service.py start_service.py
 ADD spring-cloud-docker-discovery.jar app.jar
 
