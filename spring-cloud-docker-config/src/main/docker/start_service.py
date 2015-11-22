@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     # First we wait to see if eureka is up
     while not eureka_up:
-        health_response = requests.get("http:%s:%s/health" % (eureka_host, eureka_port))
+        health_response = requests.get("http://%s:%s/health" % (eureka_host, eureka_port))
 
         if health_response.status_code != 200:
             _logger.info("Non 200 returned sleeping for %s seconds and will try again" % LOOP_SLEEP)
@@ -58,7 +58,7 @@ if __name__ == "__main__":
         app_found = False
 
         while not app_found:
-            app_info_response = requests.get("http:%s:%s/health" % (eureka_host, eureka_port))
+            app_info_response = requests.get("http://%s:%s/health" % (eureka_host, eureka_port))
             app_info = app_info_response.json()
 
             apps = app_info["applications"]["application"]
