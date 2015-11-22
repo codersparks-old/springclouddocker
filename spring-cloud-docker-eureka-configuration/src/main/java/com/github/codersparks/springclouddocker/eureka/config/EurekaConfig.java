@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Profile;
  * Created by codersparks on 21/11/2015.
  */
 @Configuration
+@Profile("DEV")
 public class EurekaConfig  {
 
     private static final Logger logger = LoggerFactory.getLogger(EurekaConfig.class);
@@ -23,7 +24,6 @@ public class EurekaConfig  {
     private int instancePort;
 
     @Bean
-    @Profile("DEV")
     public EurekaInstanceConfigBean eurekaInstanceConfigBean() {
         EurekaInstanceConfigBean instanceConfigBean = new EurekaInstanceConfigBean();
         instanceConfigBean.setPreferIpAddress(true);
