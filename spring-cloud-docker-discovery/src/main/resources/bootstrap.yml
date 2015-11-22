@@ -1,8 +1,6 @@
 spring:
   application:
     name: SCDDiscovery
-  profiles:
-    active: DEV
 eureka:
   client:
     registerWithEureka: false

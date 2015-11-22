@@ -1,8 +1,6 @@
 spring:
   application:
     name: SCDConfig
-  profiles:
-    active: 'DEV'
   cloud:
     config:
       discovery:

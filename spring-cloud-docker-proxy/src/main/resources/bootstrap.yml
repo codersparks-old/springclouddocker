@@ -1,8 +1,6 @@
 spring:
   application:
     name: SCDProxy
-  profiles:
-    active: 'DEV'
   cloud:
     config:
       discovery:
