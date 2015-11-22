@@ -23,6 +23,7 @@ def get_app_list(apps):
 
 if __name__ == "__main__":
 
+    logging.basicConfig(level=logging.INFO)
     dependencies = os.environ["SCD_DEPENDENCIES"].split(",")
     _logger.info("Dependencies: %s" % dependencies)
     eureka_host = os.environ["SCD_EUREKA_HOST"]
