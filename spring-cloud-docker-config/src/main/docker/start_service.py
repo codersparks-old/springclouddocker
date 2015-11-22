@@ -97,3 +97,4 @@ if __name__ == "__main__":
 
     while process.returncode is None:
         _logger.info("Process pid: %s" % process.pid)
+        time.sleep(30)
